@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeadLine-JS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header class="box-top">
+        <nav>
+            <div id="logo">
+                <img src="image/logo/logo.jpg" alt="">
+                <h4>Deadline X</h4>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#slides">Slides</a></li>
+                <li><a href="#form">Form</a></li>
+                <li><a href="#shopping">Shopping</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+        <h2>Nguyễn Văn Hoàng</h2>
+    </div>
+    <div class="main">
+        <div id="slides">
+            <h2>List of pretty girls</h2>
+            <div class="carousel">
+                <div class="slider">
+                    <img src="image/slides/1.jpg" alt="">
+                    <img src="image/slides/2.jpg" alt="">
+                    <img src="image/slides/3.jpg" alt="">
+                    <img src="image/slides/4.jpg" alt="">
+                    <img src="image/slides/5.jpg" alt="">
+                </div>
+                <div class="controls">
+                    <button class="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+                    <button class="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </button>
+                </div>
+                <ul class="location">
+                    <li class="selected"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div id="form">
+            <h2>
+                Đăng Ký Thành Viên
+            </h2>
+            <!-- -->
+            <form action="form.html" onsubmit="return check()">
+                <div class="centerForm">
+                    <div style="width: 50%;float: left;margin-right: 5%;">
+                        <div class="form-control">
+                            <label>Mã sinh viên</label>
+                            <input type="text" id="masv">
+                        </div>
+                        <div class="form-control">
+                            <label>Họ và tên</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="form-control">
+                            <label>Email</label>
+                            <input type="text" id="email">
+                        </div>
+                        <div class="form-control">
+                            <label>Giới tính</label>
+                            <div id="gioitinh">
+                                <div style="display: inline-block;margin-right:50px;margin-left: 40px;">
+                                    <label for="male">Nam</label>
+                                    <input type="radio" id="male" name="gender" value="male">
+                                </div>
+                                <div style="display: inline-block;">
+                                    <label for="female">Nữ</label>
+                                    <input type="radio" id="female" name="gender" value="female">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 45%;float: left;">
+                        <div class="form-control">
+                            <label>Sở thích </label>
+                            <div id="sothich">
+                                <input id="sothich1" class="checkbox_sothich" type="checkbox">
+                                <label for="">Đọc sách</label>
+                                <input id="sothich2" class="checkbox_sothich" type="checkbox">
+                                <label for="">Du lịch</label>
+                                <input id="sothich3" class="checkbox_sothich" type="checkbox">
+                                <label for="">Âm lịch</label>
+                                <input id="sothich4" class="checkbox_sothich" type="checkbox">
+                                <label for="">Ẩm thực</label>
+                                <input id="sothich5" class="checkbox_sothich" type="checkbox">
+                                <label for="">Khác</label>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label>Quốc tịch</label>
+                            <select id="quoctich">
+                                <option value="vietnam">Việt Nam</option>
+                                <option value="Lao">Lào</option>
+                                <option value="khac">Khác</option>
+                            </select>
+                        </div>
+                        <div class="form-control">
+                            <label>Ghi chú</label>
+                            <textarea id="ghichu" rows="6" cols="10"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="submitButton">
+                        <input type="submit" value="Đăng Ký">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div id="shopping">
+            <h2>Cart</h2>
+            <select name="" id="mucgia">
+                <option>Mức giá</option>
+                <option value="5">Từ 1 đến 10</option>
+                <option value="15">Từ 10 đến 20</option>
+                <option value="25">Từ 20 đến 30</option>
+            </select>
+            <table id="customers" style="text-align: center;">
+                <tr>
+                    <th>Checkbox</th>
+                    <th>Hàng Hoá</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+                <tr id="id_cart1">
+                    <td><input type="checkbox" name="" id="checkbox1"></td>
+                    <td>Iphone X</td>
+                    <td>5</td>
+                    <td><input type="number" value="10" min="0" id="input1"></td>
+                    <td id="total1"></td>
+                </tr>
+                <tr id="id_cart2">
+                    <td><input type="checkbox" name="" id="checkbox2"></td>
+                    <td>Dép lào</td>
+                    <td>15</td>
+                    <td><input type=" number" value="20" min="0" id="input2"></td>
+                    <td id="total2"></td>
+                </tr>
+                <tr id="id_cart3">
+                    <td><input type="checkbox" name="" id="checkbox3"></td>
+                    <td>Áo</td>
+                    <td>25</td>
+                    <td><input type=" number" value="30" min="0" id="input3"></td>
+                    <td id="total3"></td>
+                </tr>
+                <tr id="id_cart" style="font-weight: 700;background-color: rgb(219, 204, 184);">
+                    <td colspan="4">Tổng tiền:</td>
+                    <td id="total"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- <div class="footer">
+        heelo
+    </div> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
