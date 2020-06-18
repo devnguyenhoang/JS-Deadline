@@ -277,14 +277,36 @@ const id_cart3 = document.getElementById('id_cart3');
 
 
 selectElement.addEventListener('change', (event) => {
-	const result = document.querySelector('.result');
+
+	if (event.target.value == 0) {
+		checkbox1.checked = false;
+		checkbox2.checked = false;
+		checkbox3.checked = false;
+
+		input1.disabled = false;
+		input2.disabled = false;
+		input3.disabled = false;
+
+		total1.style.display = '';
+		total2.style.display = '';
+		total3.style.display = '';
+	}
 	if (event.target.value == price1) {
+
+		checkbox1.checked = false;
+		input1.disabled = false;
+		total1_value = input1_value * price1;
+		total1.style.display = '';
+		total1.innerHTML = `${total1_value}`;
+
+
 		id_cart1.style.display = '';
 		id_cart2.style.display = 'none';
 		id_cart3.style.display = 'none';
-		total1_value = input1_value * price1;
+		// total1_value = input1_value * price1;
 		total2_value = 0;
 		total3_value = 0;
+
 		sumTotal_value = sum(total1_value, total2_value, total3_value);
 		sumTotal.innerHTML = `${sumTotal_value}`;
 		console.log(sumTotal_value);
@@ -300,6 +322,12 @@ selectElement.addEventListener('change', (event) => {
 			console.log(sumTotal_value);
 		}
 		if (event.target.value == price2) {
+			checkbox2.checked = false;
+			input2.disabled = false;
+			total2_value = input2_value * price2;
+			total2.style.display = '';
+			total2.innerHTML = `${total2_value}`;
+
 			id_cart1.style.display = 'none';
 			id_cart3.style.display = 'none';
 			total1_value = 0;
@@ -321,6 +349,13 @@ selectElement.addEventListener('change', (event) => {
 				console.log(sumTotal_value);
 			}
 			if (event.target.value == price3) {
+				checkbox3.checked = false;
+				input3.disabled = false;
+				total3_value = input3_value * price3;
+				total3.style.display = '';
+				total3.innerHTML = `${total3_value}`;
+
+				checkbox3.checked = false;
 				id_cart1.style.display = 'none';
 				id_cart2.style.display = 'none';
 				total1_value = 0;
@@ -342,7 +377,8 @@ selectElement.addEventListener('change', (event) => {
 				}
 			}
 		}
-
+		
+		
 	}
 
 });
