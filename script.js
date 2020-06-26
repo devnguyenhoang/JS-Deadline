@@ -84,32 +84,73 @@ function check() {
 	const ghichu = document.getElementById('ghichu');
 	const gioitinh = document.getElementById('gioitinh');
 	const sothich = document.getElementById('sothich');
+
+	var thongbao_masv = document.getElementById('thongbao_masv');
+	var thongbao_name = document.getElementById('thongbao_name');
+	var thongbao_email = document.getElementById('thongbao_email');
+	var thongbao_gioitinh = document.getElementById('thongbao_gioitinh');
+	var thongbao_sothich = document.getElementById('thongbao_sothich');
+	var thongbao_ghichu = document.getElementById('thongbao_ghichu');
+
 	const masv1 = masv.value.trim();
 	const name1 = name.value.trim();
 	const email1 = email.value.trim();
 	const ghichu1 = ghichu.value.trim();
 	if (masv1 === '') {
 		masv.style.borderColor = 'red';
+		thongbao_masv.style.display = 'inline';
+		thongbao_masv.innerHTML = 'không được để trống';
+	}
+	else {
+		masv.style.borderColor = '';
+		thongbao_masv.style.display = 'none';
 	}
 	if (name1 === '') {
 		name.style.borderColor = 'red';
+		thongbao_name.style.display = 'inline';
+		thongbao_name.innerHTML = 'không được để trống';
+	}
+	else {
+		name.style.borderColor = '';
+		thongbao_name.style.display = 'none';
 	}
 	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	if (email1 === '') {
 		email.style.borderColor = 'red';
+		thongbao_email.style.display = 'inline';
+		thongbao_email.innerHTML = 'không được để trống';
 	} else if (!filter.test(email1)) {
 		email.style.borderColor = 'yellow';
+		thongbao_email.style.display = 'inline';
+		thongbao_email.innerHTML = 'không đúng định dạng';
 	}
-
+	else {
+		email.style.borderColor = '';
+		thongbao_email.style.display = 'none';
+	}
 	if (ghichu1 === '') {
 		ghichu.style.borderColor = 'red';
+		thongbao_ghichu.style.display = 'inline';
+		thongbao_ghichu.innerHTML = 'không được để trống';
 	} else if (ghichu.length >= 200) {
 		ghichu.style.borderColor = 'yellow';
+		thongbao_ghichu.style.display = 'inline';
+		thongbao_ghichu.innerHTML = 'không được quá 200 kí tự';
+	}
+	else {
+		ghichu.style.borderColor = '';
+		thongbao_ghichu.style.display = 'none';
 	}
 	const male = document.getElementById('male').checked;
 	const female = document.getElementById('female').checked;
 	if (male === false && female === false) {
 		gioitinh.style.borderColor = 'red';
+		thongbao_gioitinh.style.display = 'inline';
+		thongbao_gioitinh.innerHTML = 'Hãy chọn 1 trong 2';
+	}
+	else {
+		gioitinh.style.borderColor = '';
+		thongbao_gioitinh.style.display = 'none';
 	}
 	const sothich1 = document.getElementById('sothich1').checked;
 	const sothich2 = document.getElementById('sothich2').checked;
@@ -121,6 +162,13 @@ function check() {
 		sothich5 === false
 	) {
 		sothich.style.borderColor = 'red';
+		thongbao_sothich.style.display = 'inline';
+		thongbao_sothich.innerHTML = 'Hãy chọn 1 trong các sở thích';
+	}
+	else {
+		sothich.style.borderColor = '';
+		thongbao_gioitinh.style.display = 'none';
+
 	}
 	return false;
 }
@@ -377,8 +425,8 @@ selectElement.addEventListener('change', (event) => {
 				}
 			}
 		}
-		
-		
+
+
 	}
 
 });

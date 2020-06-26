@@ -389,3 +389,34 @@ textarea {
     background-color: red;
     height: 200px;
 }
+
+#thongbao_masv{
+    display: none;
+    color: rgb(231, 43, 43);
+    font-size: 15px;
+}
+#thongbao_name{
+    display: none;
+    color: rgb(231, 43, 43);
+    font-size: 15px;
+}
+#thongbao_email{
+    display: none;
+    color: rgb(231, 43, 43);
+    font-size: 15px;
+}
+#thongbao_gioitinh{
+    display: none;
+    color: rgb(231, 43, 43);
+    font-size: 15px;
+}
+#thongbao_sothich{
+    display: none;
+    color: rgb(231, 43, 43);
+    font-size: 15px;
+}
+#thongbao_ghichu{
+    display: none;
+    color: rgb(231, 43, 43);
+    font-size: 15px;
+}

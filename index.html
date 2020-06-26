@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
 </head>
 
 <body>
@@ -73,14 +72,17 @@
                         <div class="form-control">
                             <label>Mã sinh viên</label>
                             <input type="text" id="masv">
+                            <p class="thongbao" id="thongbao_masv">hello</p>
                         </div>
                         <div class="form-control">
                             <label>Họ và tên</label>
                             <input type="text" id="name">
+                            <p id="thongbao_name"></p>
                         </div>
                         <div class="form-control">
                             <label>Email</label>
                             <input type="text" id="email">
+                            <p id="thongbao_email"></p>
                         </div>
                         <div class="form-control">
                             <label>Giới tính</label>
@@ -94,6 +96,7 @@
                                     <input type="radio" id="female" name="gender" value="female">
                                 </div>
                             </div>
+                            <p id="thongbao_gioitinh"></p>
                         </div>
                     </div>
                     <div style="width: 45%;float: left;">
@@ -111,6 +114,7 @@
                                 <input id="sothich5" class="checkbox_sothich" type="checkbox">
                                 <label for="">Khác</label>
                             </div>
+                            <p id="thongbao_sothich"></p>
                         </div>
                         <div class="form-control">
                             <label>Quốc tịch</label>
@@ -119,10 +123,12 @@
                                 <option value="Lao">Lào</option>
                                 <option value="khac">Khác</option>
                             </select>
+                            
                         </div>
                         <div class="form-control">
                             <label>Ghi chú</label>
                             <textarea id="ghichu" rows="6" cols="10"></textarea>
+                            <p id="thongbao_ghichu"></p>
                         </div>
                     </div>
 
